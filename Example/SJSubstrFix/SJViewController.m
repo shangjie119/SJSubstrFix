@@ -8,6 +8,9 @@
 
 #import "SJViewController.h"
 
+#import "NSString+SJSubstrFix.h"
+#define SJLog(format, ...) printf("%s\n", [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
+
 @interface SJViewController ()
 
 @end
@@ -18,6 +21,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *str = @"🎊asdsd🎊asd🎊";
+    NSString *str1 = [str sj_substringWithRange_validSub:NSMakeRange(1, 7)];
+    NSString *str2 = [str sj_substringWithRange_validAll:NSMakeRange(1, 7)];
+    SJLog(@"str1 : %@   str2 : %@", str1, str2);
 }
 
 - (void)didReceiveMemoryWarning

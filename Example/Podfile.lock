@@ -1,0 +1,16 @@
+PODS:
+  - SJSubstrFix (0.1.0)
+
+DEPENDENCIES:
+  - SJSubstrFix (from `../`)
+
+EXTERNAL SOURCES:
+  SJSubstrFix:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SJSubstrFix: 611c6d3424d7dd40c63d6c96845ca6ffe251e86e
+
+PODFILE CHECKSUM: 8b1ff98d382d77e150004f89fdc728c69e14b7ac
+
+COCOAPODS: 1.10.1
